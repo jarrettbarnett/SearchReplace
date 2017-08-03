@@ -1,15 +1,54 @@
-# Wordpress Search and Replace 
+# Search and Replace 
 
-SearchReplace is a PHP library that makes it easier to perform data replacements on the database and even handles serialized data like that found in Wordpress, Drupal, and other often pre-json era applications.
+SearchReplace is a PHP library aimed at executing search and replace queries on the database and even handles json, serialized data, and base64 replacements.
 
 
+## Basic Example
+Without composer
+
+    require 'src/SearchReplace.php';
+    
+    $request = new SearchReplace();
+    $request->setDatabase($host, $username, $password, $database)
+            ->search($needle, $search_regex)
+            ->replace($needle, $search_regex)
+            ->execute();
  
-## Basic Usage
-$request = new SearchReplace();
-$request->setDatabase($host, $username, $password, $database)
-        ->search($needle, $search_regex)
-        ->replace($needle, $search_regex)
-        ->execute();
+## Basic Example (Composer)
+Using composer autoload
+
+    // require autoloader
+    require 'vendor/autoload.php';
+    
+    // use namespace
+    use SearchReplace/SearchReplace;
+    
+    // .. somewhere in your file
+
+    $request = new SearchReplace();
+    $request->setDatabase()
+            ->search($needle, $search_regex)
+            ->replace($needle, $search_regex)
+            ->execute();
+        
+## Advanced Example
+Create a custom database resource that we can pass around. Specify tables to exclude during search execution.
+    
+    // create custom database connection
+    $db_instance = new SearchReplaceMySQLDatabase($host, $username, $password, $database);
+    $exclude_tables = [
+        'craft_entries'
+        'wp_posts',
+        'wp_postmeta'
+    ];
+    
+    $request = new SearchReplace();
+    $request->setDatabase($db_instance)
+            ->search($needle, $search_regex)
+            ->replace($needle, $search_regex)
+            ->includeAllTables(true)
+            ->excludeTables($exclude_tables)
+            ->execute();
 
 // get instance
 // set database connection
