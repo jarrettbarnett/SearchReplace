@@ -25,6 +25,10 @@ class SearchReplace
     protected $table_row_offset;
     protected $table_row_limit;
 
+    /**
+     * @var bool $exceptions - enable/disable exceptions
+     */
+    protected $exceptions = true;
     protected $errors;
 
     public function __construct()
@@ -32,8 +36,27 @@ class SearchReplace
 
     }
 
-    public function search($search, $regex = false) {}
-    public function replace($replace, $regex = false) {}
+    /**
+     * Search
+     *
+     * @param $search
+     * @param bool $regex
+     */
+    public function search($search, $regex = false)
+    {
+
+    }
+
+    /**
+     * Replace
+     *
+     * @param $replace
+     * @param bool $regex
+     */
+    public function replace($replace, $regex = false)
+    {
+
+    }
 
     /**
      * Set Database
@@ -43,18 +66,18 @@ class SearchReplace
      */
     public function setDatabase($resource_or_host = '', $username = '', $password = '', $database = '')
     {
-        if (empty($resource_or_host)) {
-            throw new Exception('setDatabase(): Database resource/hostname cannot be empty');
-        }
+        if (empty($resource_or_host)) return $this->throwError('setDatabase(): Database resource/hostname cannot be empty');
 
         if (is_resource($resource_or_host)) {
             $this->db = $resource_or_host;
+
             return $this;
         }
 
-        // empty passwords are allowed so we dont check it
-        if (empty($username)) throw new Exception('setDatabase(): Username parameter cannot be empty.');
-        if (empty($database)) throw new Exception('setDatabase(): Database name parameter cannot be empty.');
+        if (empty($username)) return $this->throwError('setDatabase(): Username parameter cannot be empty.');
+        if (empty($database)) return $this->throwError('setDatabase(): Database name parameter cannot be empty.');
+
+        // empty passwords are allowed
         $password = (empty($password)) ? '' : $password;
 
         $instance = new SearchReplaceDatabase($resource_or_host, $username, $password, $database);
@@ -64,14 +87,30 @@ class SearchReplace
     }
 
     /**
+     * Throw Error
+     * @param $error_message
+     * @param bool $return_value_if_disabled
+     * @return bool
+     */
+    public function throwError($error_message, $return_value_if_disabled = false)
+    {
+        if ($this->exceptions)
+        {
+            throw new Exception($error_message);
+        }
+
+        return $return_value_if_disabled;
+    }
+
+    /**
      * Include All Tables
+     *
+     * @param $bool (bool)
+     * @return $this
      */
     public function includeAllTables($bool)
     {
-        if (!is_bool($bool))
-        {
-            throw new Exception('includeAllTables(): Non-boolean value supplied.');
-        }
+        if (!is_bool($bool)) return $this->throwError('includeAllTables(): Non-boolean value supplied.');
 
         $this->include_all_tables = $bool;
 
@@ -134,10 +173,7 @@ class SearchReplace
      */
     public function setTableOffset($offset)
     {
-        if (!is_numeric($offset))
-        {
-            throw new Exception('Table offset must be a number!');
-        }
+        if (!is_numeric($offset)) return $this->throwError('Table offset must be a number!');
 
         $this->table_offset = (int) $offset;
 
@@ -151,10 +187,7 @@ class SearchReplace
      */
     public function setTableLimit($limit)
     {
-        if (!is_numeric($limit))
-        {
-            throw new Exception('Table limit must be a number!');
-        }
+        if (!is_numeric($limit)) return $this->throwError('Table limit must be a number!');
 
         $this->table_limit = (int) $limit;
 
@@ -215,6 +248,11 @@ class SearchReplace
         return $this;
     }
 
+    /**
+     * Verify Prerequisites
+     *
+     * @return array
+     */
     public function verifyPrereqs()
     {
         if (empty($this->db))
@@ -262,16 +300,25 @@ class SearchReplace
         return $this;
     }
 
+    /**
+     * Prepare
+     */
     private function prepare()
     {
         $this->prepareTables();
     }
 
+    /**
+     * Prepare Tables
+     */
     private function prepareTables()
     {
 
     }
 
+    /**
+     * Execute!
+     */
     public function execute()
     {
         $this->verifyPrereqs();
