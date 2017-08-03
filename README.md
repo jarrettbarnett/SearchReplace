@@ -52,12 +52,25 @@ Create a custom database resource that we can pass around. Specify tables to exc
 
 ## Methods
 
-### setDatabase( _string_ $host, _string_ $username, _string_ $password, _string_ $database )
+### setDatabase( _mixed_ $resource_or_host [, _string_ $username, _string_ $password, _string_ $database ] )
+You can pass in a database resource or you can allow the class to create a new database resource by providing the full database credentials.
 #### Parameters
-###### $host _(string)_
-* The host address for the database.
+###### $resource_or_host _(string)_
+* A database resource or the host address for the database if you intend on creating a new database resource.
 
-    e.g. 127.0.0.1, localhost, 192.168.100.1
+Resource example:
+
+    $mysqli = new mysqli('localhost', 'user', 'password', 'database');
+    
+    $request = new SearchReplace();
+    $request->setDatabase($mysqli);
+    
+Credentials example:
+
+    $request = new SearchReplace();
+    $request->setDatabase('localhost', 'user', 'password', 'database');
+    
+
 ###### $username _(string)_
 * The username needed to connect to the database.
 ###### $password _(string)_
