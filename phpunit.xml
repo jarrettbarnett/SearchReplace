@@ -9,7 +9,10 @@
          processIsolation="false"
          stopOnFailure="false">
     <testsuites>
-        <testsuite name="Unit">
+        <testsuite name="SearchReplace">
+            <directory suffix="Test.php">./tests</directory>
+        </testsuite>
+        <testsuite name="SearchReplaceDatabase">
             <directory suffix="Test.php">./tests</directory>
         </testsuite>
     </testsuites>
