@@ -31,9 +31,16 @@ class SearchReplace
     protected $exceptions = true;
     protected $errors;
 
-    public function __construct()
+    /**
+     * SearchReplace constructor.
+     * @param $db_resource
+     */
+    public function __construct($db_resource = '')
     {
-
+        if (!empty($db_resource))
+        {
+            $this->setDatabase($db_resource);
+        }
     }
 
     /**
@@ -60,8 +67,10 @@ class SearchReplace
 
     /**
      * Set Database
-     *
      * @param $resource_or_host
+     * @param $username
+     * @param $password
+     * @param $database
      * @return $this
      */
     public function setDatabase($resource_or_host = '', $username = '', $password = '', $database = '')
@@ -104,7 +113,6 @@ class SearchReplace
 
     /**
      * Include All Tables
-     *
      * @param $bool (bool)
      * @return $this
      */
