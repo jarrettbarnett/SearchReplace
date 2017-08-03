@@ -80,7 +80,7 @@ Call this method to define replacements on the database.
 ###### $regex _(bool)_
 * Whether the replace value is a RegEx pattern
 
-### includeAllTables( _boolean_ $bool = true)
+### includeAllTables( _bool_ $bool = true)
 Adds all tables to the search queue. Defaults to true.
 #### Parameters
 ###### $bool _(boolean)_
