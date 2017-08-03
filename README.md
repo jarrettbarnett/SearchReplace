@@ -50,14 +50,6 @@ Create a custom database resource that we can pass around. Specify tables to exc
             ->excludeTables($exclude_tables)
             ->execute();
 
-// get instance
-// set database connection
-// set needle and haystack
-// set regex bool
-// set tables to perform replacement on
-// perform search/replace
-// get results
-
 ## Methods
 
 ### setDatabase( _string_ $host, _string_ $username, _string_ $password, _string_ $database )
