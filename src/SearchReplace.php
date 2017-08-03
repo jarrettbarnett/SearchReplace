@@ -106,13 +106,8 @@ class SearchReplace
         // empty passwords are allowed
         $password = (empty($password)) ? '' : $password;
 
-        try {
-            $instance = new SearchReplaceDatabase($resource_or_host, $username, $password, $database);
-            $this->db = $instance->db();
-        } catch (Exception $e) {
-            $this->throwError($e->getMessage());
-        }
-
+        $instance = new SearchReplaceDatabase($resource_or_host, $username, $password, $database);
+        $this->db = $instance->db();
 
         return $this;
     }

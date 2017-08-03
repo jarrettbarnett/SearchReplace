@@ -1,0 +1,8 @@
+SearchReplaceTest\SearchReplace
+ [x] Search
+ [x] Replace
+ [x] Set database manually
+ [x] Throws exception
+ [x] Doesnt throw exception
+ [x] Get exception string
+

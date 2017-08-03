@@ -25,12 +25,25 @@ class SearchReplaceTest extends TestCase
     public function replace() {}
 
     /** @test */
-    public function set_database()
+    public function set_database_manually()
     {
         $searchReplace = new SearchReplace();
         $searchReplace->setDatabase(self::DB_HOST, self::DB_USER, self::DB_PASS, self::DB_NAME);
 
         $this->assertTrue(is_object($searchReplace->db()), 'Manual database connection failed.');
+    }
+    
+    public function set_empty_database_throws_exception()
+    {
+        try {
+            $searchReplace = new SearchReplace('localhost', 'bad_user', 'bad_pass', 'bad_database');
+            $searchReplace->setDatabase();
+        } catch (Exception $e)
+        {
+            $exception = $e;
+        }
+            
+        $this->assertObjectHasAttribute('getMessage', $exception, 'Exception not thrown for bad database credentials!');
     }
 
     /** @test */
@@ -58,6 +71,23 @@ class SearchReplaceTest extends TestCase
 
         $another_error = $searchReplace->throwError('Third Error Message', 'Custom Value If Exceptions Disabled');
         $this->assertEquals('Custom Value If Exceptions Disabled', $another_error, 'Custom value not being returned when exceptions are disabled!');
+    }
+
+    /** @test */
+    public function get_exception_string()
+    {
+        try {
+            $searchReplace = new SearchReplace();
+            $searchReplace->throwError('Some Error Message');
+        } catch (SearchReplaceException $e) {
+            $exception = $e;
+        }
+
+        ob_start();
+        echo $exception;
+        $message = ob_get_clean();
+
+        $this->assertEquals('SearchReplace\SearchReplaceException: [0]: Some Error Message', trim($message));
     }
 
     public function include_all_tables() {}
