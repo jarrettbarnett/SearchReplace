@@ -1,0 +1,16 @@
+{
+    "name": "jarrettbarnett/searchreplace",
+    "description": "Search and Replace Database Tool",
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "^6.2"
+    },
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Jarrett Barnett",
+            "email": "hello@jarrettbarnett.com"
+        }
+    ],
+    "require": {}
+}
