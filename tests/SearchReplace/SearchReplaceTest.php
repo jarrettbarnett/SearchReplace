@@ -32,18 +32,19 @@ class SearchReplaceTest extends TestCase
 
         $this->assertTrue(is_object($searchReplace->db()), 'Manual database connection failed.');
     }
-    
-    public function set_empty_database_throws_exception()
+
+    /** @test */
+    public function set_bad_database_credentials_throws_exception()
     {
         try {
-            $searchReplace = new SearchReplace('localhost', 'bad_user', 'bad_pass', 'bad_database');
-            $searchReplace->setDatabase();
-        } catch (Exception $e)
+            $searchReplace = new SearchReplace();
+            $searchReplace->setDatabase('localhost', 'bad_user', 'bad_pass', 'bad_database');
+        } catch (\Exception $e)
         {
             $exception = $e;
         }
-            
-        $this->assertObjectHasAttribute('getMessage', $exception, 'Exception not thrown for bad database credentials!');
+        
+        $this->assertObjectHasAttribute('serializableTrace', $exception, 'Exception not thrown for bad database credentials!');
     }
 
     /** @test */
@@ -58,6 +59,16 @@ class SearchReplaceTest extends TestCase
 
         $this->assertNotEmpty($message, 'Error message should not be empty!');
         $this->assertEquals('First Error Message', $message, 'Wrong kind of exception thrown!');
+        
+        try {
+            $searchReplace->enableExceptions();
+            $searchReplace->throwError('Second Error Message');
+        } catch (SearchReplaceException $e) {
+            $message = $e->getMessage();
+        }
+
+        $this->assertNotEmpty($message, 'Error message should not be empty!');
+        $this->assertEquals('Second Error Message', $message, 'Wrong kind of exception thrown!');
     }
 
     /** @test */
