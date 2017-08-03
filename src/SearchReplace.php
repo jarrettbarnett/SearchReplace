@@ -12,6 +12,10 @@ use SearchReplace\SearchReplaceException as Exception;
  */
 class SearchReplace
 {
+    const DEFAULT_TABLE_ROW_OFFSET = 0;
+    const DEFAULT_TABLE_ROW_LIMIT = null;
+    const DEFAULT_TABLE_ROWS_PER_BATCH = 100;
+
     /**
      * Collection of tables to execute search on
      * @var (array) $tables
@@ -23,8 +27,9 @@ class SearchReplace
     protected $tables_include_all = false;
     protected $table_offset;
     protected $table_limit;
-    protected $table_row_offset;
-    protected $table_row_limit;
+    protected $table_row_offset = self::DEFAULT_TABLE_ROW_OFFSET;
+    protected $table_row_limit = self::DEFAULT_TABLE_ROW_LIMIT;
+    protected $table_rows_per_batch = self::DEFAULT_TABLE_ROWS_PER_BATCH;
 
     protected $db;
 
@@ -293,6 +298,22 @@ class SearchReplace
         $this->setTableRowOffset($offset);
         $this->setTableRowLimit($limit);
 
+        return $this;
+    }
+
+    /**
+     * Set Table Rows Per Batch
+     * @param $rows_per_batch
+     * @return $this
+     */
+    public function setTableRowsPerBatch($rows_per_batch)
+    {
+        if (!is_numeric($rows_per_batch)) {
+            $this->throwError('setTableRowsPerBatch(): Parameter must be a number');
+        }
+        
+        $this->table_rows_per_batch = (int) $rows_per_batch;
+        
         return $this;
     }
 
