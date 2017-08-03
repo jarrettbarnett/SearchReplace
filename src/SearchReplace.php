@@ -2,6 +2,7 @@
 
 use SearchReplace\SearchReplaceDatabase;
 use SearchReplace\DatabaseTypes\MySQLi;
+use SearchReplace\SearchReplaceException as Exception;
 
 /**
  * Class SearchReplace
@@ -25,10 +26,16 @@ class SearchReplace
     protected $table_row_offset;
     protected $table_row_limit;
 
+    protected $db;
+
     /**
      * @var bool $exceptions - enable/disable exceptions
      */
     protected $exceptions = true;
+
+    /**
+     * @var array $errors - collection of errors before or during execution
+     */
     protected $errors;
 
     /**
@@ -41,6 +48,11 @@ class SearchReplace
         {
             $this->setDatabase($db_resource);
         }
+    }
+
+    public function db()
+    {
+        return $this->db;
     }
 
     /**
@@ -77,7 +89,7 @@ class SearchReplace
     {
         if (empty($resource_or_host)) return $this->throwError('setDatabase(): Database resource/hostname cannot be empty');
 
-        if (is_resource($resource_or_host)) {
+        if (is_object($resource_or_host)) {
             $this->db = $resource_or_host;
 
             return $this;
@@ -89,8 +101,13 @@ class SearchReplace
         // empty passwords are allowed
         $password = (empty($password)) ? '' : $password;
 
-        $instance = new SearchReplaceDatabase($resource_or_host, $username, $password, $database);
-        $this->db = $instance->db();
+        try {
+            $instance = new SearchReplaceDatabase($resource_or_host, $username, $password, $database);
+            $this->db = $instance->db();
+        } catch (Exception $e) {
+            $this->throwError($e->getMessage());
+        }
+
 
         return $this;
     }
@@ -100,6 +117,7 @@ class SearchReplace
      * @param $error_message
      * @param bool $return_value_if_disabled
      * @return bool
+     * @throws Exception
      */
     public function throwError($error_message, $return_value_if_disabled = false)
     {
@@ -109,6 +127,28 @@ class SearchReplace
         }
 
         return $return_value_if_disabled;
+    }
+
+    /**
+     * Enable Exceptions
+     * @return $this
+     */
+    public function enableExceptions()
+    {
+        $this->exceptions = true;
+
+        return $this;
+    }
+
+    /**
+     * Disable Exceptions
+     * @return $this
+     */
+    public function disableExceptions()
+    {
+        $this->exceptions = false;
+
+        return $this;
     }
 
     /**

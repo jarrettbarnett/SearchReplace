@@ -48,6 +48,8 @@ Create a custom database resource that we can pass around. Specify tables to exc
             ->replace($needle, $search_regex)
             ->includeAllTables(true)
             ->excludeTables($exclude_tables)
+            ->setTableOffset(50)
+            ->setTableLimit(10)
             ->execute();
 
 ## Methods
@@ -55,21 +57,24 @@ Create a custom database resource that we can pass around. Specify tables to exc
 ### setDatabase( _mixed_ $resource_or_host [, _string_ $username, _string_ $password, _string_ $database ] )
 You can pass in a database resource or you can allow the class to create a new database resource by providing the full database credentials.
 #### Parameters
-###### $resource_or_host _(string)_
-* A database resource or the host address for the database if you intend on creating a new database resource.
+###### $resource_or_host _(string)_ or _(resource)_
+* Expects either a database resource or if you want the class to create a new connection, provide the host address as a string.
 
-Resource example:
+Database resource example:
 
     $mysqli = new mysqli('localhost', 'user', 'password', 'database');
     
     $request = new SearchReplace();
     $request->setDatabase($mysqli);
     
+Database resource example shortened:
+
+    $request = new SearchReplace(new mysqli('localhost', 'user', 'password', 'database'));
+    
 Credentials example:
 
     $request = new SearchReplace();
     $request->setDatabase('localhost', 'user', 'password', 'database');
-    
 
 ###### $username _(string)_
 * The username needed to connect to the database.
@@ -100,16 +105,34 @@ Adds all tables to the search queue. Defaults to true.
 * True - enables adding all tables to the search queue.
 * False - disables adding all tables to the search queue.
 
-### includeTables( _array_ $tables )
-Allows you to specify what tables to perform the search and replacement on.
+### includeTables( _array_ $tables, _bool_ $override = false)
+Allows you to specify what tables are in the search queue.
 #### Parameters
 ###### $tables _(array)_
 * An array containing the tables to perform the search on.
+
+###### $override _(bool)_
+* Whether to override any previously set include tables.
 
 ### excludeTables( _array_ $tables )
 #### Parameters
 ###### $tables _(array)_
 * An array containing the tables that should not be searched.
+
+### reset()
+Resets all table inclusions, exclusions, table ranges, and table row ranges
+
+### resetTables()
+Resets table inclusions and exclusions
+
+### setTableOffset( _int_ $offset = 0)
+
+### setTableLimit( _int_ $limit )
+### setTableRange()
+### setTableRowOffset()
+### setTableRowLimit()
+### setTableRange()
+### verifyPrereqs()
 
 ### execute()
 Executes the search and replacement.
