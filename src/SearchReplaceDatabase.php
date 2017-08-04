@@ -15,6 +15,8 @@ class SearchReplaceDatabase
         $this->username = $username;
         $this->password = $password;
         $this->database = $database;
+
+        return $this->db();
     }
 
     /**

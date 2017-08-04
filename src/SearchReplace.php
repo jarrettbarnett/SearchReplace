@@ -20,9 +20,9 @@ class SearchReplace
      * Collection of tables to execute search on
      * @var (array) $tables
      */
-    protected $tables;
-    protected $tables_include;
-    protected $tables_exclude;
+    protected $tables = [];
+    protected $tables_include = [];
+    protected $tables_exclude = [];
 
     protected $tables_include_all = false;
     protected $table_offset;
@@ -156,7 +156,7 @@ class SearchReplace
      * @param $bool (bool)
      * @return $this
      */
-    public function includeAllTables($bool)
+    public function includeAllTables($bool = true)
     {
         if (!is_bool($bool)) return $this->throwError('includeAllTables(): Non-boolean value supplied.');
 
@@ -179,7 +179,7 @@ class SearchReplace
             return $this;
         }
 
-        $this->tables = array_merge($this->tables, $tables);
+        $this->tables_include = array_merge($this->tables_include, $tables);
 
         return $this;
     }
@@ -199,6 +199,33 @@ class SearchReplace
         $this->tables_exclude = array_merge($this->tables, $tables);
 
         return $this;
+    }
+
+    /**
+     * Get Tables
+     * @return mixed
+     */
+    public function getTables()
+    {
+        return $this->tables;
+    }
+
+    /**
+     * Get Table Includes
+     * @return mixed
+     */
+    public function getTableIncludes()
+    {
+        return $this->tables_include;
+    }
+
+    /**
+     * Get Table Excludes
+     * @return mixed
+     */
+    public function getTableExcludes()
+    {
+        return $this->tables_exclude;
     }
 
     /**

@@ -1,3 +1,11 @@
+SearchReplaceTest\SearchReplaceTables
+ [x] Include all tables
+ [x] Include all tables empty param throws exception
+ [x] Include tables adds tables
+ [x] Include tables adds and resets tables
+ [x] Exclude tables
+ [x] Reset tables
+
 SearchReplaceTest\SearchReplace
  [x] Search
  [x] Replace

@@ -54,7 +54,7 @@ class SearchReplaceTest extends TestCase
         $searchReplace = new SearchReplace($database);
         $db = $searchReplace->db();
 
-        $this->assertInstanceOf('mysqli', $db);
+        $this->assertInstanceOf(\mysqli::class, $db);
     }
 
     /** @test */
@@ -110,26 +110,6 @@ class SearchReplaceTest extends TestCase
 
         $this->assertEquals('SearchReplace\SearchReplaceException: [0]: Some Error Message', trim($message));
     }
-
-    public function include_all_tables() {}
-
-    public function include_tables() {}
-
-    public function exclude_tables() {}
-
-    public function reset_tables() {}
-
-    public function set_table_offset() {}
-
-    public function set_table_limit() {}
-
-    public function set_table_range() {}
-
-    public function set_table_row_offset() {}
-
-    public function set_table_row_limit() {}
-
-    public function set_table_row_range() {}
 
     public function verify_prereqs() {}
 
