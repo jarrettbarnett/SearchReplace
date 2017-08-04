@@ -5,6 +5,7 @@ SearchReplaceTest\SearchReplaceTables
  [x] Include tables adds and resets tables
  [x] Exclude tables
  [x] Reset tables
+ [x] Execute
 
 SearchReplaceTest\SearchReplace
  [x] Search

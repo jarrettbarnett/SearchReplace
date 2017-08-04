@@ -106,4 +106,13 @@ class SearchReplaceTablesTest extends TestCase
     public function verify_prereqs() {}
 
     public function reset() {}
+
+    /** @test */
+    public function execute()
+    {
+        $searchReplace = new SearchReplace($this->db);
+        $searchReplace->execute();
+
+        // TODO verify execution
+    }
 }
