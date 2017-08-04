@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1501802685">
-  <project timestamp="1501802685">
+<coverage generated="1501881674">
+  <project timestamp="1501881674">
     <package name="SearchReplace\DatabaseTypes">
       <file name="/Users/jarrett/Sites/jarrett/searchreplace/src/DatabaseTypes/MySQL.php">
         <class name="MySQL" namespace="SearchReplace\DatabaseTypes">
@@ -31,23 +31,23 @@
       </file>
       <file name="/Users/jarrett/Sites/jarrett/searchreplace/src/SearchReplace.php">
         <class name="SearchReplace" namespace="SearchReplace" fullPackage="SearchReplace" package="SearchReplace">
-          <metrics complexity="40" methods="26" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="80" coveredstatements="18" elements="106" coveredelements="22"/>
+          <metrics complexity="40" methods="26" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="80" coveredstatements="21" elements="106" coveredelements="27"/>
         </class>
-        <line num="50" type="method" name="__construct" visibility="public" complexity="2" crap="2.15" count="5"/>
-        <line num="52" type="stmt" count="5"/>
-        <line num="54" type="stmt" count="0"/>
-        <line num="56" type="stmt" count="5"/>
-        <line num="58" type="method" name="db" visibility="public" complexity="1" crap="1" count="1"/>
-        <line num="60" type="stmt" count="1"/>
+        <line num="50" type="method" name="__construct" visibility="public" complexity="2" crap="2" count="6"/>
+        <line num="52" type="stmt" count="6"/>
+        <line num="54" type="stmt" count="1"/>
+        <line num="56" type="stmt" count="6"/>
+        <line num="58" type="method" name="db" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="60" type="stmt" count="2"/>
         <line num="69" type="method" name="search" visibility="public" complexity="1" crap="2" count="0"/>
         <line num="72" type="stmt" count="0"/>
         <line num="80" type="method" name="replace" visibility="public" complexity="1" crap="2" count="0"/>
         <line num="83" type="stmt" count="0"/>
-        <line num="93" type="method" name="setDatabase" visibility="public" complexity="6" crap="6.29" count="2"/>
-        <line num="95" type="stmt" count="2"/>
-        <line num="97" type="stmt" count="2"/>
-        <line num="98" type="stmt" count="0"/>
-        <line num="100" type="stmt" count="0"/>
+        <line num="93" type="method" name="setDatabase" visibility="public" complexity="6" crap="6" count="3"/>
+        <line num="95" type="stmt" count="3"/>
+        <line num="97" type="stmt" count="3"/>
+        <line num="98" type="stmt" count="1"/>
+        <line num="100" type="stmt" count="1"/>
         <line num="103" type="stmt" count="2"/>
         <line num="104" type="stmt" count="2"/>
         <line num="107" type="stmt" count="2"/>
@@ -139,18 +139,18 @@
         <line num="388" type="stmt" count="0"/>
         <line num="389" type="stmt" count="0"/>
         <line num="390" type="stmt" count="0"/>
-        <metrics loc="390" ncloc="247" classes="1" methods="26" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="80" coveredstatements="18" elements="106" coveredelements="22"/>
+        <metrics loc="390" ncloc="247" classes="1" methods="26" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="80" coveredstatements="21" elements="106" coveredelements="27"/>
       </file>
       <file name="/Users/jarrett/Sites/jarrett/searchreplace/src/SearchReplaceDatabase.php">
         <class name="SearchReplaceDatabase" namespace="SearchReplace" fullPackage="SearchReplace" package="SearchReplace">
           <metrics complexity="3" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="8" elements="11" coveredelements="9"/>
         </class>
-        <line num="12" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="7"/>
-        <line num="14" type="stmt" count="7"/>
-        <line num="15" type="stmt" count="7"/>
-        <line num="16" type="stmt" count="7"/>
-        <line num="17" type="stmt" count="7"/>
-        <line num="18" type="stmt" count="7"/>
+        <line num="12" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="8"/>
+        <line num="14" type="stmt" count="8"/>
+        <line num="15" type="stmt" count="8"/>
+        <line num="16" type="stmt" count="8"/>
+        <line num="17" type="stmt" count="8"/>
+        <line num="18" type="stmt" count="8"/>
         <line num="24" type="method" name="db" visibility="public" complexity="2" crap="2.06" count="2"/>
         <line num="26" type="stmt" count="2"/>
         <line num="28" type="stmt" count="1"/>
@@ -159,6 +159,6 @@
         <metrics loc="33" ncloc="24" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="8" elements="11" coveredelements="9"/>
       </file>
     </package>
-    <metrics files="4" loc="468" ncloc="306" classes="4" methods="34" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="96" coveredstatements="29" elements="130" coveredelements="36"/>
+    <metrics files="4" loc="468" ncloc="306" classes="4" methods="34" coveredmethods="9" conditionals="0" coveredconditionals="0" statements="96" coveredstatements="32" elements="130" coveredelements="41"/>
   </project>
 </coverage>

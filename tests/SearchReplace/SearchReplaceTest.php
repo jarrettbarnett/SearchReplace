@@ -48,7 +48,17 @@ class SearchReplaceTest extends TestCase
     }
 
     /** @test */
-    public function throws_exception()
+    public function set_database_using_resource_object()
+    {
+        $database = new \mysqli(self::DB_HOST, self::DB_USER, self::DB_PASS, self::DB_NAME);
+        $searchReplace = new SearchReplace($database);
+        $db = $searchReplace->db();
+
+        $this->assertInstanceOf('mysqli', $db);
+    }
+
+    /** @test */
+    public function throws_exception_when_something_goes_wrong()
     {
         try {
             $searchReplace = new SearchReplace();
@@ -72,7 +82,7 @@ class SearchReplaceTest extends TestCase
     }
 
     /** @test */
-    public function doesnt_throw_exception()
+    public function doesnt_throw_exception_when_something_goes_wrong_and_exceptions_disabled()
     {
         $searchReplace = new SearchReplace();
         $searchReplace->disableExceptions();
