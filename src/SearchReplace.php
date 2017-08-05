@@ -207,6 +207,9 @@ class SearchReplace
      */
     public function getTables()
     {
+        // TODO fetch all tables, includes, and excludes
+        $this->prepareTables();
+        
         return $this->tables;
     }
 
@@ -256,6 +259,24 @@ class SearchReplace
     }
     
     /**
+     * Get Table Row Offset
+     * @return mixed
+     */
+    public function getTableRowOffset()
+    {
+        return $this->table_row_offset;
+    }
+    
+    /**
+     * Get Table Row Limit
+     * @return mixed
+     */
+    public function getTableRowLimit()
+    {
+        return $this->table_row_limit;
+    }
+    
+    /**
      * Get Table Offset
      * @return mixed
      */
@@ -276,6 +297,14 @@ class SearchReplace
         $this->table_limit = (int) $limit;
 
         return $this;
+    }
+    
+    /**Get Table Limit
+     * @return mixed
+     */
+    public function getTableLimit()
+    {
+        return $this->table_limit;
     }
 
     /**
