@@ -110,6 +110,16 @@ class SearchReplaceTest extends TestCase
 
         $this->assertEquals('SearchReplace\SearchReplaceException: [0]: Some Error Message', trim($message));
     }
+    
+    /** @test */
+    public function can_set_and_get_table_offset()
+    {
+        $searchReplace = new SearchReplace();
+        $searchReplace->setTableOffset(100);
+        $offset = $searchReplace->getTableOffset();
+        
+        $this->assertEquals(100, $offset);
+    }
 
     public function verify_prereqs() {}
 

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1501883351">
-  <project timestamp="1501883351">
+<coverage generated="1501950213">
+  <project timestamp="1501950213">
     <package name="SearchReplace\DatabaseTypes">
-      <file name="/Users/jarrett/Sites/jarrett/searchreplace/src/DatabaseTypes/MySQL.php">
+      <file name="/Volumes/JB-SSD1/Dropbox/Sites/jarrett/searchreplace/src/DatabaseTypes/MySQL.php">
         <class name="MySQL" namespace="SearchReplace\DatabaseTypes">
           <metrics complexity="4" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="0" elements="8" coveredelements="0"/>
         </class>
@@ -18,7 +18,7 @@
       </file>
     </package>
     <package name="SearchReplace">
-      <file name="/Users/jarrett/Sites/jarrett/searchreplace/src/Exceptions/SearchReplaceException.php">
+      <file name="/Volumes/JB-SSD1/Dropbox/Sites/jarrett/searchreplace/src/Exceptions/SearchReplaceException.php">
         <class name="SearchReplaceException" namespace="SearchReplace" fullPackage="HughesApi" package="HughesApi">
           <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="5" coveredelements="5"/>
         </class>
@@ -29,25 +29,25 @@
         <line num="19" type="stmt" count="1"/>
         <metrics loc="22" ncloc="12" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="5" coveredelements="5"/>
       </file>
-      <file name="/Users/jarrett/Sites/jarrett/searchreplace/src/SearchReplace.php">
+      <file name="/Volumes/JB-SSD1/Dropbox/Sites/jarrett/searchreplace/src/SearchReplace.php">
         <class name="SearchReplace" namespace="SearchReplace" fullPackage="SearchReplace" package="SearchReplace">
-          <metrics complexity="43" methods="29" coveredmethods="15" conditionals="0" coveredconditionals="0" statements="83" coveredstatements="47" elements="112" coveredelements="62"/>
+          <metrics complexity="43" methods="29" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="83" coveredstatements="37" elements="112" coveredelements="48"/>
         </class>
-        <line num="50" type="method" name="__construct" visibility="public" complexity="2" crap="2" count="13"/>
-        <line num="52" type="stmt" count="13"/>
-        <line num="54" type="stmt" count="8"/>
-        <line num="56" type="stmt" count="13"/>
+        <line num="50" type="method" name="__construct" visibility="public" complexity="2" crap="2" count="11"/>
+        <line num="52" type="stmt" count="11"/>
+        <line num="54" type="stmt" count="6"/>
+        <line num="56" type="stmt" count="11"/>
         <line num="58" type="method" name="db" visibility="public" complexity="1" crap="1" count="2"/>
         <line num="60" type="stmt" count="2"/>
         <line num="69" type="method" name="search" visibility="public" complexity="1" crap="2" count="0"/>
         <line num="72" type="stmt" count="0"/>
         <line num="80" type="method" name="replace" visibility="public" complexity="1" crap="2" count="0"/>
         <line num="83" type="stmt" count="0"/>
-        <line num="93" type="method" name="setDatabase" visibility="public" complexity="6" crap="6" count="10"/>
-        <line num="95" type="stmt" count="10"/>
-        <line num="97" type="stmt" count="10"/>
-        <line num="98" type="stmt" count="8"/>
-        <line num="100" type="stmt" count="8"/>
+        <line num="93" type="method" name="setDatabase" visibility="public" complexity="6" crap="6" count="8"/>
+        <line num="95" type="stmt" count="8"/>
+        <line num="97" type="stmt" count="8"/>
+        <line num="98" type="stmt" count="6"/>
+        <line num="100" type="stmt" count="6"/>
         <line num="103" type="stmt" count="2"/>
         <line num="104" type="stmt" count="2"/>
         <line num="107" type="stmt" count="2"/>
@@ -64,10 +64,10 @@
         <line num="147" type="method" name="disableExceptions" visibility="public" complexity="1" crap="1" count="1"/>
         <line num="149" type="stmt" count="1"/>
         <line num="151" type="stmt" count="1"/>
-        <line num="159" type="method" name="includeAllTables" visibility="public" complexity="2" crap="2" count="2"/>
-        <line num="161" type="stmt" count="2"/>
-        <line num="163" type="stmt" count="1"/>
-        <line num="165" type="stmt" count="1"/>
+        <line num="159" type="method" name="includeAllTables" visibility="public" complexity="2" crap="3.19" count="1"/>
+        <line num="161" type="stmt" count="1"/>
+        <line num="163" type="stmt" count="0"/>
+        <line num="165" type="stmt" count="0"/>
         <line num="174" type="method" name="includeTables" visibility="public" complexity="2" crap="2" count="3"/>
         <line num="176" type="stmt" count="3"/>
         <line num="177" type="stmt" count="1"/>
@@ -117,10 +117,10 @@
         <line num="334" type="stmt" count="0"/>
         <line num="337" type="stmt" count="0"/>
         <line num="339" type="stmt" count="0"/>
-        <line num="347" type="method" name="verifyPrereqs" visibility="public" complexity="2" crap="2.15" count="1"/>
-        <line num="349" type="stmt" count="1"/>
+        <line num="347" type="method" name="verifyPrereqs" visibility="public" complexity="2" crap="6" count="0"/>
+        <line num="349" type="stmt" count="0"/>
         <line num="351" type="stmt" count="0"/>
-        <line num="354" type="stmt" count="1"/>
+        <line num="354" type="stmt" count="0"/>
         <line num="360" type="method" name="reset" visibility="public" complexity="1" crap="2" count="0"/>
         <line num="362" type="stmt" count="0"/>
         <line num="363" type="stmt" count="0"/>
@@ -136,35 +136,35 @@
         <line num="387" type="method" name="appendError" visibility="protected" complexity="1" crap="2" count="0"/>
         <line num="389" type="stmt" count="0"/>
         <line num="391" type="stmt" count="0"/>
-        <line num="397" type="method" name="prepare" visibility="private" complexity="1" crap="1" count="1"/>
-        <line num="399" type="stmt" count="1"/>
-        <line num="400" type="stmt" count="1"/>
-        <line num="405" type="method" name="prepareTables" visibility="private" complexity="1" crap="1" count="1"/>
-        <line num="408" type="stmt" count="1"/>
-        <line num="413" type="method" name="execute" visibility="public" complexity="1" crap="1" count="1"/>
-        <line num="415" type="stmt" count="1"/>
-        <line num="416" type="stmt" count="1"/>
-        <line num="417" type="stmt" count="1"/>
-        <metrics loc="417" ncloc="262" classes="1" methods="29" coveredmethods="15" conditionals="0" coveredconditionals="0" statements="83" coveredstatements="47" elements="112" coveredelements="62"/>
+        <line num="397" type="method" name="prepare" visibility="private" complexity="1" crap="2" count="0"/>
+        <line num="399" type="stmt" count="0"/>
+        <line num="400" type="stmt" count="0"/>
+        <line num="405" type="method" name="prepareTables" visibility="private" complexity="1" crap="2" count="0"/>
+        <line num="408" type="stmt" count="0"/>
+        <line num="413" type="method" name="execute" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="415" type="stmt" count="0"/>
+        <line num="416" type="stmt" count="0"/>
+        <line num="417" type="stmt" count="0"/>
+        <metrics loc="417" ncloc="262" classes="1" methods="29" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="83" coveredstatements="37" elements="112" coveredelements="48"/>
       </file>
-      <file name="/Users/jarrett/Sites/jarrett/searchreplace/src/SearchReplaceDatabase.php">
+      <file name="/Volumes/JB-SSD1/Dropbox/Sites/jarrett/searchreplace/src/SearchReplaceDatabase.php">
         <class name="SearchReplaceDatabase" namespace="SearchReplace" fullPackage="SearchReplace" package="SearchReplace">
           <metrics complexity="3" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="8" elements="11" coveredelements="9"/>
         </class>
-        <line num="12" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="15"/>
-        <line num="14" type="stmt" count="15"/>
-        <line num="15" type="stmt" count="15"/>
-        <line num="16" type="stmt" count="15"/>
-        <line num="17" type="stmt" count="15"/>
-        <line num="19" type="stmt" count="15"/>
-        <line num="26" type="method" name="db" visibility="public" complexity="2" crap="2.06" count="15"/>
-        <line num="28" type="stmt" count="15"/>
-        <line num="30" type="stmt" count="15"/>
+        <line num="12" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="11"/>
+        <line num="14" type="stmt" count="11"/>
+        <line num="15" type="stmt" count="11"/>
+        <line num="16" type="stmt" count="11"/>
+        <line num="17" type="stmt" count="11"/>
+        <line num="19" type="stmt" count="11"/>
+        <line num="26" type="method" name="db" visibility="public" complexity="2" crap="2.06" count="11"/>
+        <line num="28" type="stmt" count="11"/>
+        <line num="30" type="stmt" count="11"/>
         <line num="31" type="stmt" count="0"/>
-        <line num="34" type="stmt" count="15"/>
+        <line num="34" type="stmt" count="11"/>
         <metrics loc="35" ncloc="26" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="8" elements="11" coveredelements="9"/>
       </file>
     </package>
-    <metrics files="4" loc="497" ncloc="323" classes="4" methods="37" coveredmethods="18" conditionals="0" coveredconditionals="0" statements="99" coveredstatements="58" elements="136" coveredelements="76"/>
+    <metrics files="4" loc="497" ncloc="323" classes="4" methods="37" coveredmethods="14" conditionals="0" coveredconditionals="0" statements="99" coveredstatements="48" elements="136" coveredelements="62"/>
   </project>
 </coverage>

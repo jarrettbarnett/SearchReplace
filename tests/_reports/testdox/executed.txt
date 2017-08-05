@@ -1,19 +1,20 @@
 SearchReplaceTest\SearchReplaceTables
- [x] Include all tables
+ [ ] Include all tables
  [x] Include all tables empty param throws exception
  [x] Include tables adds tables
  [x] Include tables adds and resets tables
  [x] Exclude tables
  [x] Reset tables
- [x] Execute
+ [ ] Execute
 
 SearchReplaceTest\SearchReplace
- [x] Search
- [x] Replace
+ [ ] Search
+ [ ] Replace
  [x] Set database manually
  [x] Set bad database credentials throws exception
  [x] Set database using resource object
  [x] Throws exception when something goes wrong
  [x] Doesnt throw exception when something goes wrong and exceptions disabled
  [x] Get exception string
+ [ ] Can set and get table offset
 

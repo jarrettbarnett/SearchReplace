@@ -254,6 +254,15 @@ class SearchReplace
 
         return $this;
     }
+    
+    /**
+     * Get Table Offset
+     * @return mixed
+     */
+    public function getTableOffset()
+    {
+        return $this->table_offset;
+    }
 
     /**
      * Set limit on table list
