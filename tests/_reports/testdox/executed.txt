@@ -16,5 +16,5 @@ SearchReplaceTest\SearchReplace
  [x] Throws exception when something goes wrong
  [x] Doesnt throw exception when something goes wrong and exceptions disabled
  [x] Get exception string
- [ ] Can set and get table offset
+ [x] Can set and get table offset
 

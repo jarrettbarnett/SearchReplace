@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1501950213">
-  <project timestamp="1501950213">
+<coverage generated="1501950275">
+  <project timestamp="1501950275">
     <package name="SearchReplace\DatabaseTypes">
       <file name="/Volumes/JB-SSD1/Dropbox/Sites/jarrett/searchreplace/src/DatabaseTypes/MySQL.php">
         <class name="MySQL" namespace="SearchReplace\DatabaseTypes">
@@ -31,12 +31,12 @@
       </file>
       <file name="/Volumes/JB-SSD1/Dropbox/Sites/jarrett/searchreplace/src/SearchReplace.php">
         <class name="SearchReplace" namespace="SearchReplace" fullPackage="SearchReplace" package="SearchReplace">
-          <metrics complexity="43" methods="29" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="83" coveredstatements="37" elements="112" coveredelements="48"/>
+          <metrics complexity="44" methods="30" coveredmethods="13" conditionals="0" coveredconditionals="0" statements="84" coveredstatements="41" elements="114" coveredelements="54"/>
         </class>
-        <line num="50" type="method" name="__construct" visibility="public" complexity="2" crap="2" count="11"/>
-        <line num="52" type="stmt" count="11"/>
+        <line num="50" type="method" name="__construct" visibility="public" complexity="2" crap="2" count="12"/>
+        <line num="52" type="stmt" count="12"/>
         <line num="54" type="stmt" count="6"/>
-        <line num="56" type="stmt" count="11"/>
+        <line num="56" type="stmt" count="12"/>
         <line num="58" type="method" name="db" visibility="public" complexity="1" crap="1" count="2"/>
         <line num="60" type="stmt" count="2"/>
         <line num="69" type="method" name="search" visibility="public" complexity="1" crap="2" count="0"/>
@@ -90,81 +90,83 @@
         <line num="237" type="stmt" count="1"/>
         <line num="238" type="stmt" count="1"/>
         <line num="240" type="stmt" count="1"/>
-        <line num="249" type="method" name="setTableOffset" visibility="public" complexity="2" crap="6" count="0"/>
-        <line num="251" type="stmt" count="0"/>
-        <line num="253" type="stmt" count="0"/>
-        <line num="255" type="stmt" count="0"/>
-        <line num="263" type="method" name="setTableLimit" visibility="public" complexity="2" crap="6" count="0"/>
-        <line num="265" type="stmt" count="0"/>
-        <line num="267" type="stmt" count="0"/>
-        <line num="269" type="stmt" count="0"/>
-        <line num="278" type="method" name="setTableRange" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="280" type="stmt" count="0"/>
-        <line num="281" type="stmt" count="0"/>
-        <line num="283" type="stmt" count="0"/>
-        <line num="292" type="method" name="setTableRowOffset" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="294" type="stmt" count="0"/>
-        <line num="296" type="stmt" count="0"/>
-        <line num="305" type="method" name="setTableRowLimit" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="307" type="stmt" count="0"/>
-        <line num="309" type="stmt" count="0"/>
-        <line num="318" type="method" name="setTableRowRange" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="320" type="stmt" count="0"/>
-        <line num="321" type="stmt" count="0"/>
-        <line num="323" type="stmt" count="0"/>
-        <line num="331" type="method" name="setTableRowsPerBatch" visibility="public" complexity="2" crap="6" count="0"/>
-        <line num="333" type="stmt" count="0"/>
-        <line num="334" type="stmt" count="0"/>
-        <line num="337" type="stmt" count="0"/>
-        <line num="339" type="stmt" count="0"/>
-        <line num="347" type="method" name="verifyPrereqs" visibility="public" complexity="2" crap="6" count="0"/>
-        <line num="349" type="stmt" count="0"/>
-        <line num="351" type="stmt" count="0"/>
-        <line num="354" type="stmt" count="0"/>
-        <line num="360" type="method" name="reset" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="362" type="stmt" count="0"/>
+        <line num="249" type="method" name="setTableOffset" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="251" type="stmt" count="1"/>
+        <line num="253" type="stmt" count="1"/>
+        <line num="255" type="stmt" count="1"/>
+        <line num="262" type="method" name="getTableOffset" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="264" type="stmt" count="1"/>
+        <line num="272" type="method" name="setTableLimit" visibility="public" complexity="2" crap="6" count="0"/>
+        <line num="274" type="stmt" count="0"/>
+        <line num="276" type="stmt" count="0"/>
+        <line num="278" type="stmt" count="0"/>
+        <line num="287" type="method" name="setTableRange" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="289" type="stmt" count="0"/>
+        <line num="290" type="stmt" count="0"/>
+        <line num="292" type="stmt" count="0"/>
+        <line num="301" type="method" name="setTableRowOffset" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="303" type="stmt" count="0"/>
+        <line num="305" type="stmt" count="0"/>
+        <line num="314" type="method" name="setTableRowLimit" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="316" type="stmt" count="0"/>
+        <line num="318" type="stmt" count="0"/>
+        <line num="327" type="method" name="setTableRowRange" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="329" type="stmt" count="0"/>
+        <line num="330" type="stmt" count="0"/>
+        <line num="332" type="stmt" count="0"/>
+        <line num="340" type="method" name="setTableRowsPerBatch" visibility="public" complexity="2" crap="6" count="0"/>
+        <line num="342" type="stmt" count="0"/>
+        <line num="343" type="stmt" count="0"/>
+        <line num="346" type="stmt" count="0"/>
+        <line num="348" type="stmt" count="0"/>
+        <line num="356" type="method" name="verifyPrereqs" visibility="public" complexity="2" crap="6" count="0"/>
+        <line num="358" type="stmt" count="0"/>
+        <line num="360" type="stmt" count="0"/>
         <line num="363" type="stmt" count="0"/>
-        <line num="364" type="stmt" count="0"/>
-        <line num="365" type="stmt" count="0"/>
-        <line num="366" type="stmt" count="0"/>
-        <line num="367" type="stmt" count="0"/>
-        <line num="368" type="stmt" count="0"/>
-        <line num="369" type="stmt" count="0"/>
-        <line num="375" type="method" name="resetErrors" visibility="protected" complexity="1" crap="2" count="0"/>
+        <line num="369" type="method" name="reset" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="371" type="stmt" count="0"/>
+        <line num="372" type="stmt" count="0"/>
+        <line num="373" type="stmt" count="0"/>
+        <line num="374" type="stmt" count="0"/>
+        <line num="375" type="stmt" count="0"/>
+        <line num="376" type="stmt" count="0"/>
         <line num="377" type="stmt" count="0"/>
-        <line num="379" type="stmt" count="0"/>
-        <line num="387" type="method" name="appendError" visibility="protected" complexity="1" crap="2" count="0"/>
-        <line num="389" type="stmt" count="0"/>
-        <line num="391" type="stmt" count="0"/>
-        <line num="397" type="method" name="prepare" visibility="private" complexity="1" crap="2" count="0"/>
-        <line num="399" type="stmt" count="0"/>
+        <line num="378" type="stmt" count="0"/>
+        <line num="384" type="method" name="resetErrors" visibility="protected" complexity="1" crap="2" count="0"/>
+        <line num="386" type="stmt" count="0"/>
+        <line num="388" type="stmt" count="0"/>
+        <line num="396" type="method" name="appendError" visibility="protected" complexity="1" crap="2" count="0"/>
+        <line num="398" type="stmt" count="0"/>
         <line num="400" type="stmt" count="0"/>
-        <line num="405" type="method" name="prepareTables" visibility="private" complexity="1" crap="2" count="0"/>
+        <line num="406" type="method" name="prepare" visibility="private" complexity="1" crap="2" count="0"/>
         <line num="408" type="stmt" count="0"/>
-        <line num="413" type="method" name="execute" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="415" type="stmt" count="0"/>
-        <line num="416" type="stmt" count="0"/>
+        <line num="409" type="stmt" count="0"/>
+        <line num="414" type="method" name="prepareTables" visibility="private" complexity="1" crap="2" count="0"/>
         <line num="417" type="stmt" count="0"/>
-        <metrics loc="417" ncloc="262" classes="1" methods="29" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="83" coveredstatements="37" elements="112" coveredelements="48"/>
+        <line num="422" type="method" name="execute" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="424" type="stmt" count="0"/>
+        <line num="425" type="stmt" count="0"/>
+        <line num="426" type="stmt" count="0"/>
+        <metrics loc="426" ncloc="267" classes="1" methods="30" coveredmethods="13" conditionals="0" coveredconditionals="0" statements="84" coveredstatements="41" elements="114" coveredelements="54"/>
       </file>
       <file name="/Volumes/JB-SSD1/Dropbox/Sites/jarrett/searchreplace/src/SearchReplaceDatabase.php">
         <class name="SearchReplaceDatabase" namespace="SearchReplace" fullPackage="SearchReplace" package="SearchReplace">
           <metrics complexity="3" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="8" elements="11" coveredelements="9"/>
         </class>
-        <line num="12" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="11"/>
-        <line num="14" type="stmt" count="11"/>
-        <line num="15" type="stmt" count="11"/>
-        <line num="16" type="stmt" count="11"/>
-        <line num="17" type="stmt" count="11"/>
-        <line num="19" type="stmt" count="11"/>
-        <line num="26" type="method" name="db" visibility="public" complexity="2" crap="2.06" count="11"/>
-        <line num="28" type="stmt" count="11"/>
-        <line num="30" type="stmt" count="11"/>
+        <line num="12" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="12"/>
+        <line num="14" type="stmt" count="12"/>
+        <line num="15" type="stmt" count="12"/>
+        <line num="16" type="stmt" count="12"/>
+        <line num="17" type="stmt" count="12"/>
+        <line num="19" type="stmt" count="12"/>
+        <line num="26" type="method" name="db" visibility="public" complexity="2" crap="2.06" count="12"/>
+        <line num="28" type="stmt" count="12"/>
+        <line num="30" type="stmt" count="12"/>
         <line num="31" type="stmt" count="0"/>
-        <line num="34" type="stmt" count="11"/>
+        <line num="34" type="stmt" count="12"/>
         <metrics loc="35" ncloc="26" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="8" elements="11" coveredelements="9"/>
       </file>
     </package>
-    <metrics files="4" loc="497" ncloc="323" classes="4" methods="37" coveredmethods="14" conditionals="0" coveredconditionals="0" statements="99" coveredstatements="48" elements="136" coveredelements="62"/>
+    <metrics files="4" loc="506" ncloc="328" classes="4" methods="38" coveredmethods="16" conditionals="0" coveredconditionals="0" statements="100" coveredstatements="52" elements="138" coveredelements="68"/>
   </project>
 </coverage>
