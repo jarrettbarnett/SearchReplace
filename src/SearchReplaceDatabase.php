@@ -1,5 +1,7 @@
 <?php namespace SearchReplace;
 
+use SearchReplace\SearchReplaceException as Exception;
+
 /**
  * Class SearchReplaceDatabase
  * @package SearchReplace
@@ -18,10 +20,12 @@ class SearchReplaceDatabase
 
         return $this->db();
     }
-
+    
     /**
      * Return db instance
+     *
      * @return mixed
+     * @throws SearchReplaceException
      */
     public function db()
     {
