@@ -12,6 +12,9 @@ matrix:
 services:
   - mysql
 
+before_install:
+  - mysql -e 'CREATE DATABASE searchreplace.dev;'
+
 before_script:
   - composer install --no-interaction -o
   - if [ "$dependencies" = "lowest" ]; then composer update -o --prefer-lowest; fi;
