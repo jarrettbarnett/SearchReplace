@@ -88,7 +88,7 @@ class SearchReplace
      * @param $username
      * @param $password
      * @param $database
-     * @return $this
+     * @return mixed
      */
     public function setDatabase($resource_or_host = '', $username = '', $password = '', $database = '')
     {
