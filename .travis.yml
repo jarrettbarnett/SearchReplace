@@ -9,6 +9,8 @@ matrix:
     include:
         - php: 7.0
           env: dependencies=lowest
+services:
+  - mysql
 
 before_script:
   - composer install --no-interaction -o
