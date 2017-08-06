@@ -4,9 +4,9 @@
     "type": "library",
     "require-dev": {
         "phpunit/phpunit": "@stable",
-        "mockery/mockery": "^0.9.9",
-        "phpunit/php-code-coverage": "^5.2",
-        "satooshi/php-coveralls": "^1.0"
+        "mockery/mockery": "@stable",
+        "phpunit/php-code-coverage": "@stable",
+        "satooshi/php-coveralls": "@stable"
     },
     "license": "GPL-3.0",
     "authors": [
