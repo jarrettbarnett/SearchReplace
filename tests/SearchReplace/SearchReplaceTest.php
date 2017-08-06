@@ -19,10 +19,8 @@ class SearchReplaceTest extends TestCase
         $this->db = new SearchReplaceDatabase(self::DB_HOST, self::DB_USER, self::DB_PASS, self::DB_NAME);
     }
 
-    /** @test */
     public function search() {}
 
-    /** @test */
     public function replace() {}
 
     /** @test */

@@ -18,7 +18,6 @@ class SearchReplaceTablesTest extends TestCase
         $this->db = new SearchReplaceDatabase(self::DB_HOST, self::DB_USER, self::DB_PASS, self::DB_NAME);
     }
 
-    /** @test */
     public function include_all_tables()
     {
         $searchReplace = new SearchReplace($this->db);
@@ -107,7 +106,6 @@ class SearchReplaceTablesTest extends TestCase
 
     public function reset() {}
 
-    /** @test */
     public function execute()
     {
         $searchReplace = new SearchReplace($this->db);
