@@ -441,7 +441,17 @@ class SearchReplace
      */
     private function prepareTables()
     {
-
+        if ($this->tables_include_all === true) {
+            $this->tables = array_merge($this->tables, $this->db->getAllTables());
+        }
+        
+        if (!empty($this->tables_include)) {
+            $this->tables = array_merge($this->tables, $this->tables_include);
+        }
+        
+        if (!empty($this->tables_exclude)) {
+            $this->tables = array_diff($this->tables, $this->tables_exclude);
+        }
     }
 
     /**
