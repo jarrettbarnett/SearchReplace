@@ -15,10 +15,20 @@ services:
 
 before_install:
   - mysql -e 'CREATE DATABASE searchreplace_dev;'
+  - mysql -e 'CREATE TABLE `sr_table1` (
+                `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+                `text_column` text NOT NULL,
+                `mixed_column` text NOT NULL,
+                `int_column` int(11) NOT NULL DEFAULT '1',
+                `null_column` int(11) DEFAULT NULL,
+                `empty_column` int(11) NOT NULL,
+                PRIMARY KEY (`id`)
+              ) ENGINE=InnoDB DEFAULT CHARSET=utf8;'
 
 before_script:
   - composer install --no-interaction -o
   - if [ "$dependencies" = "lowest" ]; then composer update -o --prefer-lowest; fi;
+  -
 
 script:
   - mkdir -p build/logs
