@@ -13,7 +13,7 @@ services:
   - mysql
 
 before_install:
-  - mysql -e 'CREATE DATABASE searchreplace.dev;'
+  - mysql -e 'CREATE DATABASE searchreplace_dev;'
 
 before_script:
   - composer install --no-interaction -o
