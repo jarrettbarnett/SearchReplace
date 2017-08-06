@@ -4,6 +4,7 @@ use PHPUnit\Framework\TestCase;
 use SearchReplace\SearchReplace;
 use SearchReplace\SearchReplaceDatabase;
 use SearchReplace\SearchReplaceException;
+use \Mockery;
 
 class SearchReplaceTest extends TestCase
 {
