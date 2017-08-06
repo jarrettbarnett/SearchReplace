@@ -1,5 +1,6 @@
 <?php namespace SearchReplace;
 
+use SearchReplace\SearchReplaceDatabaseInterface;
 use SearchReplace\SearchReplaceException as Exception;
 
 /**
@@ -7,7 +8,7 @@ use SearchReplace\SearchReplaceException as Exception;
  * @package SearchReplace
  * @author Jarrett Barnett <hello@jarrettbarnett.com>
  */
-class SearchReplaceDatabase
+class SearchReplaceDatabase implements SearchReplaceDatabaseInterface
 {
     protected $db, $host, $username, $password, $database;
 
@@ -35,6 +36,34 @@ class SearchReplaceDatabase
             throw new Exception("Failed to connect to MySQL: (" . $this->db->connect_errno . ") " . $this->db->connect_error);
         }
 
+        return $this;
+    }
+    
+    public function getDatabase()
+    {
         return $this->db;
+    }
+    
+    public function useDatabase()
+    {
+        if (empty($this->database))
+        {
+            return false;
+        }
+        
+        ($this->db)::select_db($this->database);
+        
+        return $this;
+    }
+    
+    /**
+     * Get All Tables
+     * @return mixed
+     */
+    public function getAllTables()
+    {
+        $result = $this->db->query('SHOW TABLES');
+        
+        return $result->toArray();
     }
 }

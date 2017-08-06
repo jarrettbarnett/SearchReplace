@@ -107,7 +107,7 @@ class SearchReplace
         $password = (empty($password)) ? '' : $password;
 
         $instance = new SearchReplaceDatabase($resource_or_host, $username, $password, $database);
-        $this->db = $instance->db();
+        $this->db = $instance;
 
         return $this;
     }
