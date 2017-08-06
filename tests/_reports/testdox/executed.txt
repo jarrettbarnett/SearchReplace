@@ -1,25 +1,21 @@
 SearchReplaceTest\SearchReplaceTables
- [ ] Include all tables
- [x] Include all tables empty param throws exception
- [x] Include tables adds tables
- [x] Include tables adds and resets tables
- [x] Exclude tables
- [x] Reset tables
- [ ] Execute
+ [ ] Include all tables empty param throws exception
+ [ ] Include tables adds tables
+ [ ] Include tables adds and resets tables
+ [ ] Exclude tables
+ [ ] Reset tables
 
 SearchReplaceTest\SearchReplace
- [ ] Search
- [ ] Replace
- [x] Set database manually
- [x] Set bad database credentials throws exception
- [x] Set database using resource object
- [x] Throws exception when something goes wrong
- [x] Doesnt throw exception when something goes wrong and exceptions disabled
- [x] Get exception string
- [x] Can set and get table offset
- [x] Can set and get table limit
- [x] Can set and get range values
- [x] Can set and get table row offset
- [x] Can set and get table row limit
- [x] Can set and get row range values
+ [ ] Set database manually
+ [ ] Set bad database credentials throws exception
+ [ ] Set database using resource object
+ [ ] Throws exception when something goes wrong
+ [ ] Doesnt throw exception when something goes wrong and exceptions disabled
+ [ ] Get exception string
+ [ ] Can set and get table offset
+ [ ] Can set and get table limit
+ [ ] Can set and get range values
+ [ ] Can set and get table row offset
+ [ ] Can set and get table row limit
+ [ ] Can set and get row range values
 
