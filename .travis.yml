@@ -17,7 +17,7 @@ before_script:
 
 script:
   - mkdir -p build/logs
-  - bin/phpunit
+  - ./vendor/bin/phpunit
 
 after_script:
   - bin/coveralls -v
