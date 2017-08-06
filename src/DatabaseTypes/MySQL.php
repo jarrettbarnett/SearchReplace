@@ -7,17 +7,17 @@ class MySQL
 
     }
 
-    public function get_character_set()
+    public function getCharacterSet()
     {
 
     }
 
-    public function get_primary_key()
+    public function getPrimaryKey()
     {
 
     }
 
-    public function get_columns()
+    public function getColumns()
     {
 
     }

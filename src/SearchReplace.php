@@ -207,7 +207,6 @@ class SearchReplace
      */
     public function getTables()
     {
-        // TODO fetch all tables, includes, and excludes
         $this->prepareTables();
         
         return $this->tables;
