@@ -59,27 +59,29 @@ class SearchReplace
     {
         return $this->db;
     }
-
+    
     /**
      * Search
      *
      * @param $search
      * @param bool $regex
+     * @return $this
      */
     public function search($search, $regex = false)
     {
-
+        return $this;
     }
-
+    
     /**
      * Replace
      *
      * @param $replace
      * @param bool $regex
+     * @return $this
      */
     public function replace($replace, $regex = false)
     {
-
+        return $this;
     }
 
     /**
@@ -246,7 +248,7 @@ class SearchReplace
      * Start table execution at a specific offset
      * Useful for executing search in batches
      * @param $offset
-     * @return $this
+     * @return mixed
      */
     public function setTableOffset($offset)
     {
