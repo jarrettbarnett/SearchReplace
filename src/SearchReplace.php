@@ -6,31 +6,44 @@ use SearchReplace\SearchReplaceException as Exception;
 
 /**
  * Class SearchReplace
- * @package SearchReplace
+ *
+ * @property bool include_all_tables
+* @package SearchReplace
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
  * @author Jarrett Barnett <hello@jarrettbarnett.com>
  */
 class SearchReplace
 {
+    // DEFAULTS
     const DEFAULT_TABLE_ROW_OFFSET = 0;
     const DEFAULT_TABLE_ROW_LIMIT = null;
     const DEFAULT_TABLE_ROWS_PER_BATCH = 100;
+    
+    /**
+     * Collection of search/replace properties
+     */
+    protected $search_property;
+    protected $search_regex;
+    protected $replace_property;
+    protected $replace_regex;
 
     /**
      * Collection of tables to execute search on
      * @var (array) $tables
      */
     protected $tables = [];
+    protected $tables_include_all = false;
     protected $tables_include = [];
     protected $tables_exclude = [];
-
-    protected $tables_include_all = false;
     protected $table_offset;
     protected $table_limit;
     protected $table_row_offset = self::DEFAULT_TABLE_ROW_OFFSET;
     protected $table_row_limit = self::DEFAULT_TABLE_ROW_LIMIT;
     protected $table_rows_per_batch = self::DEFAULT_TABLE_ROWS_PER_BATCH;
-
+    
+    /**
+     * @var $db
+     */
     protected $db;
 
     /**
@@ -69,6 +82,8 @@ class SearchReplace
      */
     public function search($search, $regex = false)
     {
+        $this->search_property = $search;
+        $this->search_regex = $regex;
         return $this;
     }
     
@@ -81,6 +96,8 @@ class SearchReplace
      */
     public function replace($replace, $regex = false)
     {
+        $this->replace_property = $replace;
+        $this->replace_regex = $regex;
         return $this;
     }
 
@@ -156,13 +173,13 @@ class SearchReplace
     /**
      * Include All Tables
      * @param $bool (bool)
-     * @return $this
+     * @return mixed
      */
     public function includeAllTables($bool = true)
     {
         if (!is_bool($bool)) return $this->throwError('includeAllTables(): Non-boolean value supplied.');
 
-        $this->include_all_tables = $bool;
+        $this->tables_include_all = $bool;
 
         return $this;
     }
@@ -289,7 +306,7 @@ class SearchReplace
     /**
      * Set limit on table list
      * @param $limit
-     * @return $this
+     * @return mixed
      */
     public function setTableLimit($limit)
     {
