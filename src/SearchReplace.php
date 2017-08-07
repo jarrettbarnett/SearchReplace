@@ -215,6 +215,7 @@ class SearchReplace
 
             return $this;
         }
+        
         $this->tables_exclude = array_merge($this->tables, $tables);
 
         return $this;
@@ -222,7 +223,7 @@ class SearchReplace
 
     /**
      * Get Tables
-     * @return mixed
+     * @return array
      */
     public function getTables()
     {
@@ -233,7 +234,7 @@ class SearchReplace
 
     /**
      * Get Table Includes
-     * @return mixed
+     * @return array
      */
     public function getTableIncludes()
     {
@@ -242,7 +243,7 @@ class SearchReplace
 
     /**
      * Get Table Excludes
-     * @return mixed
+     * @return array
      */
     public function getTableExcludes()
     {
@@ -278,7 +279,7 @@ class SearchReplace
     
     /**
      * Get Table Row Offset
-     * @return mixed
+     * @return int
      */
     public function getTableRowOffset()
     {
@@ -287,7 +288,7 @@ class SearchReplace
     
     /**
      * Get Table Row Limit
-     * @return mixed
+     * @return int
      */
     public function getTableRowLimit()
     {
@@ -296,7 +297,7 @@ class SearchReplace
     
     /**
      * Get Table Offset
-     * @return mixed
+     * @return int
      */
     public function getTableOffset()
     {
@@ -317,8 +318,9 @@ class SearchReplace
         return $this;
     }
     
-    /**Get Table Limit
-     * @return mixed
+    /**
+     * Get Table Limit
+     * @return int
      */
     public function getTableLimit()
     {
@@ -412,6 +414,7 @@ class SearchReplace
 
     /**
      * Reset The Request For Another Go-Round'
+     * @return $this
      */
     public function reset()
     {
@@ -422,11 +425,13 @@ class SearchReplace
         $this->table_limit = [];
         $this->table_row_offset = [];
         $this->table_row_limit = [];
+        
+        return $this;
     }
 
     /**
      * Reset Errors
-     * @return $this;
+     * @return $this
      */
     protected function resetErrors()
     {
@@ -438,7 +443,7 @@ class SearchReplace
     /**
      * Append Error
      * @param $error
-     * @return $this;
+     * @return $this
      */
     protected function appendError($error)
     {
@@ -449,14 +454,18 @@ class SearchReplace
 
     /**
      * Prepare
+     * @return $this
      */
     private function prepare()
     {
         $this->prepareTables();
+        
+        return $this;
     }
 
     /**
      * Prepare Tables
+     * @return $this
      */
     private function prepareTables()
     {
@@ -471,6 +480,8 @@ class SearchReplace
         if (!empty($this->tables_exclude)) {
             $this->tables = array_diff($this->tables, $this->tables_exclude);
         }
+        
+        return $this;
     }
 
     /**
