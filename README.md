@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/jarrettbarnett/SearchReplace.svg?branch=master)](https://travis-ci.org/jarrettbarnett/SearchReplace)
-[![Coverage Status](https://coveralls.io/repos/github/jarrettbarnett/SearchReplace/badge.svg?branch=master)](https://coveralls.io/github/jarrettbarnett/SearchReplace?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/jarrettbarnett/SearchReplace/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/jarrettbarnett/SearchReplace/?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/jarrettbarnett/SearchReplace/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/jarrettbarnett/SearchReplace/?branch=master)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/6ddf9fd3-dd10-4fb2-81f2-47b28fba1734/mini.png)](https://insight.sensiolabs.com/projects/6ddf9fd3-dd10-4fb2-81f2-47b28fba1734)
 
